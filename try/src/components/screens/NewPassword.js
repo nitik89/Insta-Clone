@@ -14,7 +14,7 @@ const NewPassword = () => {
     
     const postData=()=>{
      
-fetch("http://localhost:5000/new-password",{
+fetch("/new-password",{
     method:"post",
     headers:{
         "Content-Type":"application/json"

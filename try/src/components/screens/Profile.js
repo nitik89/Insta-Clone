@@ -19,7 +19,7 @@ useEffect(()=>{
 },[])
     useEffect(() => {
 
-    fetch('http://localhost:5000/mypost',{
+    fetch('/mypost',{
     headers:{
         "Authorization":"Bearer "+localStorage.getItem("jwt")
     }
@@ -53,7 +53,7 @@ useEffect(()=>{
         
     
           
-                fetch('http://localhost:5000/updatepic',{
+                fetch('/updatepic',{
                     method:'put',
                     headers:{
                         "Content-Type":'application/json',

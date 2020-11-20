@@ -7,7 +7,7 @@ const  SubscribeUserPosts=()=> {
     const [loading,setLoading]=useState(false);
         useEffect(()=>{
             setLoading(true);
-        fetch("http://localhost:5000/getsubpost",{
+        fetch("/getsubpost",{
             headers:{
                 'Authorization':"Bearer "+localStorage.getItem("jwt")
             }
@@ -22,7 +22,7 @@ const  SubscribeUserPosts=()=> {
 
     const likePost=(id)=>{
      
-        fetch('http://localhost:5000/like',{
+        fetch('/like',{
              method:"put",
              headers:{
                 "Content-Type":"application/json",
@@ -53,7 +53,7 @@ const  SubscribeUserPosts=()=> {
         })
     }
     const unlikePost=(id)=>{
-        fetch('http://localhost:5000/unlike',{
+        fetch('/unlike',{
              method:"put",
              headers:{
                 "Content-Type":"application/json",
@@ -78,7 +78,7 @@ const  SubscribeUserPosts=()=> {
         })
     }
     const commentPost = (text,postId)=>{
-        fetch('http://localhost:5000/comment',{
+        fetch('/comment',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -106,7 +106,7 @@ const  SubscribeUserPosts=()=> {
 
     const deletePost = (postid)=>{
         console.log(postid);
-        fetch(`http://localhost:5000/deletepost/${postid}`,{
+        fetch(`/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")

@@ -45,7 +45,7 @@ M.Sidenav.init(sidenav.current)
   }
   const fetchUsers=(query)=>{
     setSearch(query);
-    fetch('http://localhost:5000/search-users',{
+    fetch('/search-users',{
       method:"post",
       headers:{
         "Content-Type":"application/json",
