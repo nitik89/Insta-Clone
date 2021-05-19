@@ -9,7 +9,7 @@ const SignUp = () => {
     const [email,setEmail]=useState("");
     const [image,setImage]=useState("");
     const [url,setUrl]=useState(undefined);
-    console.log(email);
+ 
     
 useEffect(() => {
     if(url){
